@@ -1,0 +1,6 @@
+[submodule "MIPI_Camera"]
+	path = MIPI_Camera
+	url = https://github.com/ArduCAM/MIPI_Camera.git
+[submodule "gst-arducamsrc"]
+	path = gst-arducamsrc
+	url = https://github.com/raspberrypiexperiments/gst-arducamsrc.git
