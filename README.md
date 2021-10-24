@@ -1,4 +1,4 @@
-# RaspberryPi-ArduCam
+# RaspberryPi-Arducam
 
 ## Overview
 
@@ -18,8 +18,8 @@ This repository depends on:
 Installation procedure:
 
 ```bash
-git clone --recurse-submodules -j$(nproc) https://github.com/raspberrypiexperiments/RaspberryPi-ArduCam.git
-cd RaspberryPi-ArduCam
+git clone --recurse-submodules -j$(nproc) https://github.com/raspberrypiexperiments/RaspberryPi-Arducam.git
+cd RaspberryPi-Arducam
 make install
 ```
 
@@ -30,7 +30,7 @@ Uninstallation procedure:
 ```bash
 make uninstall
 cd ..
-sudo rm -rf RaspberryPi-ArduCam
+sudo rm -rf RaspberryPi-Arducam
 ```
 
 ## License
