@@ -7,7 +7,8 @@ This repository provides enables to install GStreamer plugin for **arducamsrc**.
 ## Dependencies
 
 This repository depends on:
-* [RaspberryPi-GStreamer-1.0](https://github.com/raspberrypiexperiments/RaspberryPi-GStreamer-1.0).
+* [RaspberryPi-GStreamer-1.0](https://github.com/raspberrypiexperiments/RaspberryPi-GStreamer-1.0) on Buster,
+* No dependency on Bullseye.
 
 ## Known supported Raspberry Pi
 
