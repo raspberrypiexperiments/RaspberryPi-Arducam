@@ -11,7 +11,13 @@ This repository depends on:
 
 ## Known supported Raspberry Pi
 
+* Raspberry Pi 3B,
 * Raspberry Pi 4B.
+
+## Known supported OS
+
+* Buster,
+* Bullseye.
 
 ## Installation
 
@@ -19,7 +25,11 @@ Installation procedure:
 
 ```bash
 git clone --recurse-submodules -j$(nproc) https://github.com/raspberrypiexperiments/RaspberryPi-Arducam.git
+```
+```bash
 cd RaspberryPi-Arducam
+```
+```bash
 make install
 ```
 
@@ -29,7 +39,11 @@ Uninstallation procedure:
 
 ```bash
 make uninstall
+```
+```bash
 cd ..
+```
+```bash
 sudo rm -rf RaspberryPi-Arducam
 ```
 
@@ -37,4 +51,4 @@ sudo rm -rf RaspberryPi-Arducam
 
 MIT License
 
-Copyright (c) 2021 Marcin Sielski <marcin.sielski@gmail.com>
+Copyright (c) 2021-2022 Marcin Sielski <marcin.sielski@gmail.com>

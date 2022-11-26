@@ -20,11 +20,15 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+PYTHONVERION=`python --version | cut -d' ' -f2 | cut -d'.' -f1,2`
+
 dependencies:
 	sudo install -m 644 MIPI_Camera/RPI/lib/libarducam_mipicamera.so /usr/local/lib/
 	sudo cp MIPI_Camera/RPI/arducam_mipicamera.h /usr/local/include
-	sudo mkdir -p /usr/local/lib/python3.7/arducam_mipicamera
-	sudo cp MIPI_Camera/RPI/python/arducam_mipicamera.py /usr/local/lib/python3.7
+	sudo mkdir -p /usr/local/lib/python$(PYTHONVERION)/dist-packages/arducam_mipicamera
+	sudo cp MIPI_Camera/RPI/python/arducam_mipicamera.py /usr/local/lib/python$(PYTHONVERION)/dist-packages/arducam_mipicamera
+	echo PYTHONPATH=/usr/local/lib/python$(PYTHONVERION)/dist-packages:$$PYTHONPATH > ~/.bashrc
+	source ~/.bashrc
 	sudo ldconfig
 	bash MIPI_Camera/RPI/enable_i2c_vc.sh
 
@@ -34,3 +38,4 @@ install: dependencies
 uninstall:
 	sudo rm -rf /usr/local/lib/libarducam_mipicamera.so
 	sudo rm -rf /usr/local/include/arducam_mipicamera.h
+	sudo rm -rf /usr/local/lib/python$(PYTHONVERION)/dist-packages/arducam_mipicamera
